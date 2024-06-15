@@ -213,20 +213,125 @@ body {
   flex-basis: 387px;
 }
 .acardion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+.acardion-content.open {
+  max-height: 200px;
   padding-top: 20px;
-  padding-bottom: 20px;
-  display: none;
+  padding-bottom: 10px;
 }
 .acardion-content-text {
   margin-bottom: 10px;
 }
 .acardion-triger-img {
   margin-right: 91px;
+  transition: transform 0.3s ease;
+}
+.akardion-triger.active .acardion-triger-img {
+  transform: rotate(180deg);
+}
+/*------------------------ Products ------------------------*/
+.products {
+  padding-bottom: 150px;
+}
+.products-tittle {
+  margin-left: 224px;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 400;
+  font-family: "Playfair Display", serif;
+}
+.products-list {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 150px;
+}
+.products-item {
+}
+.products-list-tittle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+.products-tittle-text {
+  font-weight: 700;
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.products-text {
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 10px;
+}
+.products-item-text {
+  font-weight: 400;
+  font-size: 32px;
+  color: #000;
+  font-family: "Playfair Display", serif;
+}
+/*--------------------  footer  ----------------------------------*/
+.footer {
+  background-color: #c4a9cd;
 }
 
-.akardion-triger:active,
-.acardion-triger:focus {
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 66px;
+  padding-bottom: 70px;
 }
-.akardion-content:active,
-.acardion-content:focus {
+.footer-inner-logo {
+  display: flex;
+  gap: 83px;
+}
+.footer-inner-title {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  margin-bottom: 20px;
+}
+.footer-inner-input {
+  margin-bottom: 70px;
+}
+.footer-inner-link {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+}
+.footer-inner-icon {
+  display: flex;
+  align-items: flex-end;
+}
+
+.footer-icon-menu {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.footer-icon-list {
+}
+.footer-icon-link {
+}
+.footer-inner-title-child {
+  margin-top: 70px;
+}
+.footer-police {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 100px;
+  margin-left: 200px;
 }
